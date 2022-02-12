@@ -1,0 +1,21 @@
+{
+  "name": "project_one_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dateformat": "^5.0.2",
+    "express": "^4.17.1",
+    "js-dateformat": "^0.9.7",
+    "xms-basic-util": "^1.1.0"
+  },
+  "type": "module"
+}
