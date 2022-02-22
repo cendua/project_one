@@ -11,14 +11,14 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
 //自定义报错中间件
-app.use(function (req, res, next) {
-  res.cc = function (err, status = 1) {
-    res.send({
-      status,
-      message: err instanceof Error ? err.message : err,
-    });
-  };
-  next();
+app.use(function(req, res, next) {
+    res.cc = function(err, status = 1) {
+        res.send({
+            status,
+            message: err instanceof Error ? err.message : err,
+        });
+    };
+    next();
 });
 
 // 挂载home路由模块
@@ -28,6 +28,6 @@ app.use("/detail", detailrouter);
 //挂载categories路由模块
 app.use("/category", categoryrouter);
 
-app.listen(333, function () {
-  console.log("开始监听333端口");
+app.listen(333, function() {
+    console.log("开始监听333端口");
 });
